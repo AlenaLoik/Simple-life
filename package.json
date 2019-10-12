@@ -1,0 +1,28 @@
+{
+  "name": "simple-life",
+  "version": "1.0.0",
+  "description": "[It`s a link to this page](https://alenaloik.github.io/Simple-life/ \"Preview\")",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.23.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlenaLoik/Simple-life.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlenaLoik/Simple-life/issues"
+  },
+  "homepage": "https://github.com/AlenaLoik/Simple-life#readme"
+}

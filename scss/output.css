@@ -1,0 +1,167 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100px;
+  min-width: 100px;
+  box-sizing: border-box; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1; }
+
+.header, .main, .footer {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 434px; }
+
+.header {
+  flex-direction: row;
+  height: 265px;
+  background-color: #F8F8F8; }
+  .header .title {
+    display: flex;
+    flex: 3 3 auto;
+    flex-direction: column;
+    align-self: center; }
+    .header .title .title__main {
+      font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      letter-spacing: 0;
+      font-size: 42px;
+      color: #143774;
+      opacity: 1;
+      margin: 0; }
+    .header .title .title__content {
+      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      letter-spacing: 0;
+      font-size: 18px;
+      color: #1792D2;
+      opacity: 1;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0; }
+  .header .nav {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-between; }
+    .header .nav .nav__link {
+      align-self: center;
+      color: #717171;
+      font-size: 23px;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 3.2px;
+      font-weight: bold;
+      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+      .header .nav .nav__link:hover {
+        background: linear-gradient(to top, #717171 4px, transparent 0); }
+      .header .nav .nav__link:active {
+        background: linear-gradient(to top, #717171 4px, transparent 0); }
+
+.main .main__left {
+  flex: 1 1 auto;
+  margin-right: 50px; }
+  .main .main__left .main__top .article__header time, .main .main__left .main__content .main__item .item__header time {
+    font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #707070;
+    letter-spacing: 0;
+    opacity: 1;
+    font-size: 19px; }
+  .main .main__left .main__top .article__context h2, .main .main__left .main__content .main__item .item__context h2 {
+    font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #143774;
+    font-size: 31px;
+    margin: 40px 0 0 0; }
+  .main .main__left .main__top .article__context p, .main .main__left .main__content .main__item .item__context p {
+    font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #707070;
+    font-size: 20px;
+    margin: 30px 0px; }
+  .main .main__left .main__top .article__context a, .main .main__left .main__content .main__item .item__context a {
+    font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #1792D2;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .main .main__left .main__top {
+    display: flex;
+    border-bottom: 4px solid #EBEBEB;
+    padding-bottom: 30px;
+    margin-bottom: 30px; }
+    .main .main__left .main__top .article__header figure {
+      margin: 0 0 25px 0;
+      display: flex; }
+    .main .main__left .main__top .article__context p > a:hover {
+      background: linear-gradient(to top, #1792D2, 2px, transparent 0); }
+    .main .main__left .main__top .article__context p > a:active {
+      background: linear-gradient(to top, #1792D2, 2px, transparent 0); }
+  .main .main__left .main__content .main__item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 59px; }
+    .main .main__left .main__content .main__item .item__header {
+      margin-right: 27px; }
+      .main .main__left .main__content .main__item .item__header figure {
+        margin: 0 0 25px 0;
+        display: flex;
+        width: 10vw; }
+    .main .main__left .main__content .main__item .item__context h2 {
+      margin: 0px; }
+.main .main__sidebar {
+  flex: 2 2 auto; }
+  .main .main__sidebar .sidebar__top h3, .main .main__sidebar .sidebar__content h3 {
+    font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #143774;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 1;
+    letter-spacing: 3.6px; }
+  .main .main__sidebar .sidebar__top, .main .main__sidebar .sidebar__content {
+    display: flex;
+    flex-direction: column;
+    border: 23px solid #EBEBEB;
+    padding: 23px; }
+  .main .main__sidebar .sidebar__top {
+    margin-bottom: 45px; }
+    .main .main__sidebar .sidebar__top figure {
+      display: flex;
+      margin: 0px; }
+    .main .main__sidebar .sidebar__top p {
+      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: #143774;
+      font-size: 16px; }
+  .main .main__sidebar .sidebar__content figure {
+    display: flex;
+    width: 150px;
+    height: 87px;
+    margin: 0px; }
+  .main .main__sidebar .sidebar__content p {
+    font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #143774;
+    font-size: 17px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #EBEBEB; }
+
+.footer {
+  height: 172px;
+  background-color: #143774;
+  opacity: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .footer .footer__title, .footer .footer__copy {
+    font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+    color: white;
+    margin: 0px; }
+  .footer .footer__title {
+    font-weight: bold; }
+
+/*# sourceMappingURL=output.css.map */

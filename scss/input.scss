@@ -1,0 +1,268 @@
+@import "colors";
+@import "settings";
+@import "fonts";
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+opacity: 1;
+}
+
+%container-shared {
+display: flex;
+width: 100%;
+max-width: 1920px;
+padding: 0 434px;
+}
+
+// HEADER
+
+.header {
+@extend %container-shared;
+flex-direction: row;
+height: 265px;
+background-color: #F8F8F8;
+
+    .title {
+    display: flex;
+    flex: 3 3 auto;
+    flex-direction: column;
+    align-self: center;
+      
+      .title__main {
+        font-family: $regular-fonts;
+        letter-spacing: 0;
+        font-size: 42px;
+        color: $title-fonts;
+        opacity: 1;
+        margin: 0;
+      }
+      .title__content {
+        font-family: $ubuntu-fonts;
+        letter-spacing: 0;
+        font-size: 18px;
+        color: $light-blue;
+        opacity: 1;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+    .nav {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+      .nav__link {
+      align-self: center;
+      color: $nav-fonts;
+      font-size: 23px;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 3.2px;
+      font-weight: bold;
+      font-family: $ubuntu-fonts;
+      
+      &:hover { 
+        background: linear-gradient(to top, #717171 4px, transparent 0); 
+      }
+      &:active { 
+        background: linear-gradient(to top,#717171 4px, transparent 0); 
+      }
+    }
+  }
+}
+
+  // MAIN
+
+  
+.main {
+@extend %container-shared;
+  
+  .main__left{
+    flex: 1 1 auto;
+    margin-right: 50px;
+
+    %article__header-shared {
+      time {
+        font-family: $ubuntu-fonts;
+        color: $content-fonts;
+        letter-spacing: 0;
+        opacity: 1;
+        font-size: 19px;  
+      }
+    }
+    %article__context-shared {
+      h2 {
+        font-family: $regular-fonts;
+        color: $title-fonts;
+        font-size: 31px;
+        margin: 40px 0 0 0;
+      }
+      p {
+        font-family: $ubuntu-fonts;
+        color: $content-fonts;
+        font-size: 20px;
+        margin: 30px 0px;
+      }
+      a {
+        font-family: $ubuntu-fonts;
+        color: $light-blue;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    .main__top{
+      display: flex;
+      border-bottom: 4px solid $border-grey;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      .article__header {
+        @extend %article__header-shared;
+        figure {
+          margin: 0 0 25px 0;
+          display: flex;
+          }
+      }
+      .article__context{
+        @extend %article__context-shared;
+
+        p > a {
+          &:hover { 
+            background: linear-gradient(to top, $light-blue, 2px, transparent 0); 
+          }
+          &:active { 
+            background: linear-gradient(to top, $light-blue, 2px, transparent 0); 
+          }
+        }
+
+      } 
+    }
+
+    .main__content{
+      .main__item {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 59px;
+
+        .item__header {
+          @extend %article__header-shared;
+          margin-right: 27px;
+          figure {
+            margin: 0 0 25px 0;
+            display: flex;
+            width: 10vw;
+          }
+        }
+        .item__context{
+          @extend %article__context-shared;
+          
+          h2 {
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+  .main__sidebar{
+    flex: 2 2 auto;
+
+    %h3-shared {
+      font-family: $ubuntu-fonts;
+      color: $title-fonts;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      opacity: 1;
+      letter-spacing: 3.6px;
+    }
+
+    %sidebar-sared {
+      display: flex;
+      flex-direction: column;
+      border: 23px solid $border-grey;
+      padding: 23px;
+    }
+    .sidebar__top {
+      @extend %sidebar-sared;
+      margin-bottom: 45px;
+
+      h3 {
+        @extend %h3-shared;
+      }
+      figure{
+        display: flex;
+        margin: 0px;
+      }
+      p {
+        font-family: $ubuntu-fonts;
+        color: $title-fonts;
+        font-size: 16px;
+      } 
+    }
+    .sidebar__content{
+      @extend %sidebar-sared;
+
+      h3 {
+        @extend %h3-shared;
+      }
+      figure{
+        display: flex;
+        width: 150px;
+        height: 87px;
+        margin: 0px;
+      }
+      p {
+        font-family: $ubuntu-fonts;
+        color: $title-fonts;
+        font-size: 17px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $border-grey;
+      }
+    }
+    
+    
+  }
+}
+
+
+//FOOTER
+
+.footer {
+  @extend %container-shared;
+  height: 172px;
+  background-color: $title-fonts;
+  opacity: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+    %footer-shared {
+      font-family: $ubuntu-fonts;
+      font-size: 20px;
+      opacity: 0.5;
+      color: white;
+      margin: 0px;
+    }
+    .footer__title {
+      @extend %footer-shared;
+      font-weight: bold;
+    }
+
+    .footer__copy {
+      @extend %footer-shared;
+
+
+
+    }
+}
+
+
+
