@@ -11,30 +11,31 @@ html, body {
   align-items: center;
   opacity: 1; }
 
-.header, .main, .footer {
+#myHeader, .main, .footer {
   display: flex;
   width: 100%;
   max-width: 1920px;
   padding: 0 434px; }
 
-.header {
+#myHeader {
   flex-direction: row;
   height: 265px;
   background-color: #F8F8F8;
-  margin-bottom: 50px; }
-  .header .title {
+  position: fixed;
+  transition: 0.2s; }
+  #myHeader .title {
     display: flex;
     flex: 3 3 auto;
     flex-direction: column;
     align-self: center; }
-    .header .title .title__main {
+    #myHeader .title .title__main {
       font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       letter-spacing: 0;
       font-size: 42px;
       color: #143774;
       opacity: 1;
       margin: 0; }
-    .header .title .title__content {
+    #myHeader .title .title__content {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       letter-spacing: 0;
       font-size: 18px;
@@ -44,12 +45,12 @@ html, body {
       text-transform: uppercase;
       font-weight: bold;
       margin: 0; }
-  .header .nav {
+  #myHeader .nav {
     display: flex;
     flex: 1 1 auto;
     flex-direction: row;
     justify-content: space-between; }
-    .header .nav .nav__link {
+    #myHeader .nav .nav__link {
       align-self: center;
       color: #717171;
       font-size: 23px;
@@ -57,14 +58,15 @@ html, body {
       text-decoration: none;
       letter-spacing: 3.2px;
       font-weight: bold;
-      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
-      .header .nav .nav__link:hover {
-        background: linear-gradient(to top, #717171 4px, transparent 0); }
-      .header .nav .nav__link:active {
-        background: linear-gradient(to top, #717171 4px, transparent 0); }
+      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-bottom: 5px; }
+      #myHeader .nav .nav__link:hover {
+        background: linear-gradient(to top, #717171 3px, transparent 0);
+        transition: 0.9s; }
 
 .main {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-top: 315px; }
   .main .main__left {
     flex: 1 1 auto;
     margin-right: 50px; }
@@ -79,6 +81,12 @@ html, body {
       color: #143774;
       font-size: 31px;
       margin: 40px 0 0 0; }
+      .main .main__left .main__top .article__context h2 a, .main .main__left .main__content .main__item .item__context h2 a {
+        font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: #143774;
+        font-size: 31px;
+        margin: 40px 0 0 0;
+        text-transform: none; }
     .main .main__left .main__top .article__context p, .main .main__left .main__content .main__item .item__context p {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #707070;
@@ -115,7 +123,16 @@ html, body {
         .main .main__left .main__content .main__item .item__header figure {
           margin: 0 0 25px 0;
           display: flex;
-          width: 10vw; }
+          position: relative;
+          width: 10vw;
+          height: 10vw;
+          overflow: hidden; }
+          .main .main__left .main__content .main__item .item__header figure img:hover {
+            align-self: center;
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            transition: 0.5s; }
       .main .main__left .main__content .main__item .item__context h2 {
         margin: 0px; }
   .main .main__sidebar {
