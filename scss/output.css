@@ -123,13 +123,11 @@ html, body {
         .main .main__left .main__content .main__item .item__header figure {
           margin: 0 0 25px 0;
           display: flex;
-          position: relative;
           width: 10vw;
           height: 10vw;
           overflow: hidden; }
           .main .main__left .main__content .main__item .item__header figure img:hover {
             align-self: center;
-            position: absolute;
             width: 110%;
             height: 110%;
             transition: 0.5s; }
@@ -200,5 +198,46 @@ html, body {
     margin: 0px; }
   .footer .footer__title {
     font-weight: bold; }
+
+@media (max-width: 557px) {
+  body::before {
+    content: ""; }
+
+  #myHeader, .main, .footer {
+    display: flex;
+    width: 100%;
+    max-width: 557px;
+    padding: 47px 20px; }
+
+  #myHeader {
+    height: 330px;
+    flex-direction: column; }
+    #myHeader .nav {
+      flex-direction: column;
+      justify-content: center; }
+
+  .main {
+    flex-direction: column;
+    margin-top: 388px; }
+    .main .main__left {
+      margin: 0 20px; }
+      .main .main__left .main__content .main__item {
+        flex-direction: column; }
+        .main .main__left .main__content .main__item .item__header {
+          margin: 0px; }
+          .main .main__left .main__content .main__item .item__header figure {
+            width: 95vw;
+            height: 95vw; }
+        .main .main__left .main__content .main__item .item__context h2 {
+          margin-top: 20px; }
+        .main .main__left .main__content .main__item .item__context p {
+          margin-top: 15px; }
+    .main .main__sidebar {
+      flex: 1 1 auto;
+      padding: 20px; }
+      .main .main__sidebar .sidebar__content figure {
+        width: 100%;
+        height: 100%;
+        align-self: center; } }
 
 /*# sourceMappingURL=output.css.map */
