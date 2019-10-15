@@ -313,7 +313,7 @@ margin-top: 315px;
     display: flex;
     width: 100%;
     max-width: 557px;
-    padding: 47px 20px;
+    padding: 47px 0px;
     }
   #myHeader {
   height: 330px;
@@ -327,7 +327,8 @@ margin-top: 315px;
     flex-direction: column;
     margin-top: 388px;
     .main__left {
-      margin: 0 20px;
+      margin: 0;
+      flex: 1 1 auto;
       .main__content{
         .main__item{
           flex-direction: column;
