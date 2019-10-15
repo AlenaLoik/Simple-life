@@ -7,3 +7,6 @@ function scrollFunction() {
     document.getElementById("myHeader").style.height = "265px";
   }
 }
+
+
+
