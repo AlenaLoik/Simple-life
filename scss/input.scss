@@ -6,13 +6,21 @@
 display: flex;
 flex-direction: column;
 align-items: center;
+width: 100%;
+max-width: 2086px;
 opacity: 1;
+margin-left: auto;
+margin-right: auto;
+
+}	
+.container::before {
+  content: "";
 }
 
 %container-shared {
 display: flex;
 width: 100%;
-max-width: 1920px;
+max-width: 2086px;
 padding: 0 434px;
 }
 
@@ -34,7 +42,7 @@ transition: 0.2s;
       .title__main {
         font-family: $regular-fonts;
         letter-spacing: 0;
-        font-size: 42px;
+        font-size: 33px;
         color: $title-fonts;
         opacity: 1;
         margin: 0;
@@ -42,7 +50,7 @@ transition: 0.2s;
       .title__content {
         font-family: $ubuntu-fonts;
         letter-spacing: 0;
-        font-size: 18px;
+        font-size: 12px;
         color: $light-blue;
         opacity: 1;
         letter-spacing: 2.4px;
@@ -61,16 +69,16 @@ transition: 0.2s;
       .nav__link {
       align-self: center;
       color: $nav-fonts;
-      font-size: 23px;
+      font-size: 16px;
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 3.2px;
       font-weight: bold;
       font-family: $ubuntu-fonts;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
       
       &:hover { 
-        background: linear-gradient(to top, #717171 3px, transparent 0);
+        background: linear-gradient(to top, #717171 2px, transparent 0);
         transition: 0.9s; 
       }
     }
@@ -78,7 +86,6 @@ transition: 0.2s;
 }
 
   // MAIN
- 
 .main {
 @extend %container-shared;
 margin-bottom: 50px;
@@ -94,33 +101,33 @@ margin-top: 315px;
         color: $content-fonts;
         letter-spacing: 0;
         opacity: 1;
-        font-size: 19px;  
+        font-size: 14px;  
       }
     }
     %article__context-shared {
       h2 {
         font-family: $regular-fonts;
         color: $title-fonts;
-        font-size: 31px;
-        margin: 40px 0 0 0;
+        font-size: 24px;
+        margin: 26px 0 0 0;
         a {
           font-family: $regular-fonts;
           color: $title-fonts;
-          font-size: 31px;
-          margin: 40px 0 0 0;
+          font-size: 24px;
+          margin: 26px 0 0 0;
           text-transform: none;
         }
       }
       p {
         font-family: $ubuntu-fonts;
         color: $content-fonts;
-        font-size: 20px;
-        margin: 30px 0px;
+        font-size: 18px;
+        margin: 26px 0px;
       }
       a {
         font-family: $ubuntu-fonts;
         color: $light-blue;
-        font-size: 16px;
+        font-size: 14px;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
@@ -148,9 +155,6 @@ margin-top: 315px;
             &:hover { 
             background: linear-gradient(to top, $light-blue, 2px, transparent 0); 
             }
-            &:active { 
-            background: linear-gradient(to top, $light-blue, 2px, transparent 0); 
-            }
           }
         }
       } 
@@ -167,10 +171,11 @@ margin-top: 315px;
           margin-right: 27px;
           figure {
             margin: 0 0 25px 0;
-            display: flex;
-            width: 10vw;
-            height: 10vw;
+            width: 198px;
+            height: 242px;
+            object-fit: cover;
             overflow: hidden;
+
             img {
               &:hover { 
                 align-self: center;
@@ -207,7 +212,7 @@ margin-top: 315px;
     %h3-shared {
       font-family: $ubuntu-fonts;
       color: $title-fonts;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       text-transform: uppercase;
       opacity: 1;
@@ -218,9 +223,6 @@ margin-top: 315px;
        &:hover { 
         background: linear-gradient(to top, $title-fonts, 2px, transparent 0); 
       }
-      &:active { 
-        background: linear-gradient(to top, $title-fonts, 2px, transparent 0); 
-      }
     }
 
       }
@@ -228,7 +230,7 @@ margin-top: 315px;
     %sidebar-sared {
       display: flex;
       flex-direction: column;
-      border: 23px solid $border-grey;
+      border: 22px solid $border-grey;
       padding: 23px;
 
     }
@@ -241,12 +243,12 @@ margin-top: 315px;
       }
       figure{
         display: flex;
-        margin: 0px;
+        margin: 17px 0px 23px 0px;
       }
       p {
         font-family: $ubuntu-fonts;
         color: $title-fonts;
-        font-size: 16px;
+        font-size: 14px;
       } 
     }
     .sidebar__content{
@@ -259,7 +261,7 @@ margin-top: 315px;
         display: flex;
         width: 150px;
         height: 87px;
-        margin: 0px;
+        margin: 17px 0px 23px 0px;
       }
       p {
         font-family: $ubuntu-fonts;
@@ -273,19 +275,16 @@ margin-top: 315px;
           &:hover { 
            background: linear-gradient(to top, $title-fonts, 2px, transparent 0); 
          }
-         &:active { 
-           background: linear-gradient(to top, $title-fonts, 2px, transparent 0); 
-         }
        }
       }
-    }
-    
-    
+      :last-child {
+        border: none;
+      }
+    } 
   }
 }
 
 //FOOTER
-
 .footer {
   @extend %container-shared;
   height: 172px;
@@ -298,7 +297,7 @@ margin-top: 315px;
 
     %footer-shared {
       font-family: $ubuntu-fonts;
-      font-size: 20px;
+      font-size: 18px;
       opacity: 0.5;
       color: white;
       margin: 0px;
@@ -316,30 +315,55 @@ margin-top: 315px;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1786px) {
   body::before {
     content: "";
   }
-  %container-shared {
-    display: flex;
-    width: 100%;
-    max-width: 650px;
-    padding: 47px 0px;
-    }
+  %container-shared { 
+  padding: 0 334px;
+  } 
+}
+@media (max-width: 1486px) {
+  body::before {
+    content: "";
+  }
+  %container-shared { 
+  padding: 0 200px;
+  } 
+}
+@media (max-width: 1186px) {
+  body::before {
+    content: "";
+  }
+  %container-shared { 
+  padding: 0 80px;
+  } 
+}
+@media (max-width: 950px) {
+  body::before {
+    content: "";
+  }
+  %container-shared { 
+  padding: 0px  20px;
+  } 
   #myHeader {
   height: 330px;
+  padding-top: 47px;
   flex-direction: column;
+    .title{
+      max-height: 92px;
+    }
     .nav {
-      flex-direction: column;
-      justify-content: center;
+    flex-direction: column;
+    padding-bottom: 41px;  
     }
   }
   .main {
     flex-direction: column;
-    margin-top: 388px;
+    margin-top: 330px;
     .main__left {
       margin: 0;
-      padding: 0 20px;
+
       flex: 1 1 auto;
       .main__content{
         .main__item{
@@ -366,11 +390,23 @@ margin-top: 315px;
     .main__sidebar {
       flex: 1 1 auto;
       padding: 20px;
+
+      .sidebar__top{
+        figure {
+        width: 100%;
+        height: 87px;
+          img{
+          object-fit: cover;
+          }
+        }
+      }
       .sidebar__content {
         figure {
           width: 100%;
-          height: 100%;
-          align-self: center;
+          height: 87px;
+          img{
+            object-fit: cover;
+          }
         }
       }
     }

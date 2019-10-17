@@ -1,20 +1,28 @@
-html, body {
-  margin: 0;
+@charset "UTF-8";
+*, *:after, *:before {
+  box-sizing: border-box;
   padding: 0;
-  min-height: 100px;
-  min-width: 100px;
-  box-sizing: border-box; }
+  margin: 0;
+  transition: .5s ease-in-out;
+  /* добавим плавность переходов для всех элементов страницы*/ }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 1; }
+  width: 100%;
+  max-width: 2086px;
+  opacity: 1;
+  margin-left: auto;
+  margin-right: auto; }
+
+.container::before {
+  content: ""; }
 
 #myHeader, .main, .footer {
   display: flex;
   width: 100%;
-  max-width: 1920px;
+  max-width: 2086px;
   padding: 0 434px; }
 
 #myHeader {
@@ -31,14 +39,14 @@ html, body {
     #myHeader .title .title__main {
       font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       letter-spacing: 0;
-      font-size: 42px;
+      font-size: 33px;
       color: #143774;
       opacity: 1;
       margin: 0; }
     #myHeader .title .title__content {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       letter-spacing: 0;
-      font-size: 18px;
+      font-size: 12px;
       color: #1792D2;
       opacity: 1;
       letter-spacing: 2.4px;
@@ -53,15 +61,15 @@ html, body {
     #myHeader .nav .nav__link {
       align-self: center;
       color: #717171;
-      font-size: 23px;
+      font-size: 16px;
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 3.2px;
       font-weight: bold;
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      padding-bottom: 5px; }
+      padding-bottom: 4px; }
       #myHeader .nav .nav__link:hover {
-        background: linear-gradient(to top, #717171 3px, transparent 0);
+        background: linear-gradient(to top, #717171 2px, transparent 0);
         transition: 0.9s; }
 
 .main {
@@ -75,27 +83,27 @@ html, body {
       color: #707070;
       letter-spacing: 0;
       opacity: 1;
-      font-size: 19px; }
+      font-size: 14px; }
     .main .main__left .main__top .article__context h2, .main .main__left .main__content .main__item .item__context h2 {
       font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       color: #143774;
-      font-size: 31px;
-      margin: 40px 0 0 0; }
+      font-size: 24px;
+      margin: 26px 0 0 0; }
       .main .main__left .main__top .article__context h2 a, .main .main__left .main__content .main__item .item__context h2 a {
         font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         color: #143774;
-        font-size: 31px;
-        margin: 40px 0 0 0;
+        font-size: 24px;
+        margin: 26px 0 0 0;
         text-transform: none; }
     .main .main__left .main__top .article__context p, .main .main__left .main__content .main__item .item__context p {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #707070;
-      font-size: 20px;
-      margin: 30px 0px; }
+      font-size: 18px;
+      margin: 26px 0px; }
     .main .main__left .main__top .article__context a, .main .main__left .main__content .main__item .item__context a {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #1792D2;
-      font-size: 16px;
+      font-size: 14px;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: bold; }
@@ -112,8 +120,6 @@ html, body {
         font-weight: normal; }
         .main .main__left .main__top .article__context p a:hover {
           background: linear-gradient(to top, #1792D2, 2px, transparent 0); }
-        .main .main__left .main__top .article__context p a:active {
-          background: linear-gradient(to top, #1792D2, 2px, transparent 0); }
     .main .main__left .main__content .main__item {
       display: flex;
       flex-direction: row;
@@ -122,9 +128,9 @@ html, body {
         margin-right: 27px; }
         .main .main__left .main__content .main__item .item__header figure {
           margin: 0 0 25px 0;
-          display: flex;
-          width: 10vw;
-          height: 10vw;
+          width: 198px;
+          height: 242px;
+          object-fit: cover;
           overflow: hidden; }
           .main .main__left .main__content .main__item .item__header figure img:hover {
             align-self: center;
@@ -147,7 +153,7 @@ html, body {
     .main .main__sidebar .sidebar__top h3, .main .main__sidebar .sidebar__content h3 {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #143774;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       text-transform: uppercase;
       opacity: 1;
@@ -157,27 +163,25 @@ html, body {
         color: #143774; }
         .main .main__sidebar .sidebar__top h3 a:hover, .main .main__sidebar .sidebar__content h3 a:hover {
           background: linear-gradient(to top, #143774, 2px, transparent 0); }
-        .main .main__sidebar .sidebar__top h3 a:active, .main .main__sidebar .sidebar__content h3 a:active {
-          background: linear-gradient(to top, #143774, 2px, transparent 0); }
     .main .main__sidebar .sidebar__top, .main .main__sidebar .sidebar__content {
       display: flex;
       flex-direction: column;
-      border: 23px solid #EBEBEB;
+      border: 22px solid #EBEBEB;
       padding: 23px; }
     .main .main__sidebar .sidebar__top {
       margin-bottom: 45px; }
       .main .main__sidebar .sidebar__top figure {
         display: flex;
-        margin: 0px; }
+        margin: 17px 0px 23px 0px; }
       .main .main__sidebar .sidebar__top p {
         font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         color: #143774;
-        font-size: 16px; }
+        font-size: 14px; }
     .main .main__sidebar .sidebar__content figure {
       display: flex;
       width: 150px;
       height: 87px;
-      margin: 0px; }
+      margin: 17px 0px 23px 0px; }
     .main .main__sidebar .sidebar__content p {
       font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #143774;
@@ -189,8 +193,8 @@ html, body {
         color: #143774; }
         .main .main__sidebar .sidebar__content p a:hover {
           background: linear-gradient(to top, #143774, 2px, transparent 0); }
-        .main .main__sidebar .sidebar__content p a:active {
-          background: linear-gradient(to top, #143774, 2px, transparent 0); }
+    .main .main__sidebar .sidebar__content :last-child {
+      border: none; }
 
 .footer {
   height: 172px;
@@ -201,36 +205,53 @@ html, body {
   justify-content: center; }
   .footer .footer__title, .footer .footer__copy {
     font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.5;
     color: white;
     margin: 0px; }
   .footer .footer__title {
     font-weight: bold; }
 
-@media (max-width: 650px) {
+@media (max-width: 1786px) {
   body::before {
     content: ""; }
 
   #myHeader, .main, .footer {
-    display: flex;
-    width: 100%;
-    max-width: 650px;
-    padding: 47px 0px; }
+    padding: 0 334px; } }
+@media (max-width: 1486px) {
+  body::before {
+    content: ""; }
+
+  #myHeader, .main, .footer {
+    padding: 0 200px; } }
+@media (max-width: 1186px) {
+  body::before {
+    content: ""; }
+
+  #myHeader, .main, .footer {
+    padding: 0 80px; } }
+@media (max-width: 950px) {
+  body::before {
+    content: ""; }
+
+  #myHeader, .main, .footer {
+    padding: 0px  20px; }
 
   #myHeader {
     height: 330px;
+    padding-top: 47px;
     flex-direction: column; }
+    #myHeader .title {
+      max-height: 92px; }
     #myHeader .nav {
       flex-direction: column;
-      justify-content: center; }
+      padding-bottom: 41px; }
 
   .main {
     flex-direction: column;
-    margin-top: 388px; }
+    margin-top: 330px; }
     .main .main__left {
       margin: 0;
-      padding: 0 20px;
       flex: 1 1 auto; }
       .main .main__left .main__content .main__item {
         flex-direction: column; }
@@ -247,9 +268,15 @@ html, body {
     .main .main__sidebar {
       flex: 1 1 auto;
       padding: 20px; }
+      .main .main__sidebar .sidebar__top figure {
+        width: 100%;
+        height: 87px; }
+        .main .main__sidebar .sidebar__top figure img {
+          object-fit: cover; }
       .main .main__sidebar .sidebar__content figure {
         width: 100%;
-        height: 100%;
-        align-self: center; } }
+        height: 87px; }
+        .main .main__sidebar .sidebar__content figure img {
+          object-fit: cover; } }
 
 /*# sourceMappingURL=output.css.map */
