@@ -1,6 +1,7 @@
 @import "colors";
 @import "settings";
 @import "fonts";
+@import "main";
 
 .container {
 display: flex;
@@ -28,7 +29,7 @@ padding: 0 434px;
 #myHeader {
 @extend %container-shared;
 flex-direction: row;
-height: 265px;
+height: 200px;
 background-color: #F8F8F8;
 position: fixed;
 transition: 0.2s;
@@ -85,205 +86,6 @@ transition: 0.2s;
   }
 }
 
-  // MAIN
-.main {
-@extend %container-shared;
-margin-bottom: 50px;
-margin-top: 315px;
-  
-  .main__left{
-    flex: 1 1 auto;
-    margin-right: 50px;
-
-    %article__header-shared {
-      time {
-        font-family: $ubuntu-fonts;
-        color: $content-fonts;
-        letter-spacing: 0;
-        opacity: 1;
-        font-size: 14px;  
-      }
-    }
-    %article__context-shared {
-      h2 {
-        font-family: $regular-fonts;
-        color: $title-fonts;
-        font-size: 24px;
-        margin: 26px 0 0 0;
-        a {
-          font-family: $regular-fonts;
-          color: $title-fonts;
-          font-size: 24px;
-          margin: 26px 0 0 0;
-          text-transform: none;
-        }
-      }
-      p {
-        font-family: $ubuntu-fonts;
-        color: $content-fonts;
-        font-size: 18px;
-        margin: 26px 0px;
-      }
-      a {
-        font-family: $ubuntu-fonts;
-        color: $light-blue;
-        font-size: 14px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-    }
-    .main__top{
-      display: flex;
-      border-bottom: 4px solid $border-grey;
-      padding-bottom: 30px;
-      margin-bottom: 30px;
-      .article__header {
-        @extend %article__header-shared;
-        figure {
-          margin: 0 0 25px 0;
-          display: flex;
-          }
-      }
-      .article__context{
-        @extend %article__context-shared;
-
-        p {
-          a {
-          text-transform: lowercase;
-          font-weight: normal;
-            &:hover { 
-            background: linear-gradient(to top, $light-blue, 2px, transparent 0); 
-            }
-          }
-        }
-      } 
-    }
-
-    .main__content{
-      .main__item {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 59px;
-
-        .item__header {
-          @extend %article__header-shared;
-          margin-right: 27px;
-          figure {
-            margin: 0 0 25px 0;
-            width: 198px;
-            height: 242px;
-            object-fit: cover;
-            overflow: hidden;
-
-            img {
-              &:hover { 
-                align-self: center;
-                width: 110%;
-                height: 110%;
-                transition: 0.5s; 
-              }
-            }
-          }
-        }
-        .item__context{
-          @extend %article__context-shared;
-          h2 {
-            margin: 0px;
-          }
-          p {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-            &:hover { 
-            -webkit-line-clamp: 20;
-            transition: 0.5s; 
-            }
-          }
-        }
-      }
-    }
-  }
-  .main__sidebar{
-    flex: 2 2 auto;
-
-    %h3-shared {
-      font-family: $ubuntu-fonts;
-      color: $title-fonts;
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-      opacity: 1;
-      letter-spacing: 3.6px;
-      a {
-       text-decoration: none;
-       color: $title-fonts;
-       &:hover { 
-        background: linear-gradient(to top, $title-fonts, 2px, transparent 0); 
-      }
-    }
-
-      }
-
-    %sidebar-sared {
-      display: flex;
-      flex-direction: column;
-      border: 22px solid $border-grey;
-      padding: 23px;
-
-    }
-    .sidebar__top {
-      @extend %sidebar-sared;
-      margin-bottom: 45px;
-
-      h3 {
-        @extend %h3-shared;
-      }
-      figure{
-        display: flex;
-        margin: 17px 0px 23px 0px;
-      }
-      p {
-        font-family: $ubuntu-fonts;
-        color: $title-fonts;
-        font-size: 14px;
-      } 
-    }
-    .sidebar__content{
-      @extend %sidebar-sared;
-
-      h3 {
-        @extend %h3-shared;
-      }
-      figure{
-        display: flex;
-        width: 150px;
-        height: 87px;
-        margin: 17px 0px 23px 0px;
-      }
-      p {
-        font-family: $ubuntu-fonts;
-        color: $title-fonts;
-        font-size: 17px;
-        padding-bottom: 20px;
-        border-bottom: 2px solid $border-grey;
-        a {
-          text-decoration: none;
-          color: $title-fonts;
-          &:hover { 
-           background: linear-gradient(to top, $title-fonts, 2px, transparent 0); 
-         }
-       }
-      }
-      :last-child {
-        border: none;
-      }
-    } 
-  }
-}
-
 //FOOTER
 .footer {
   @extend %container-shared;
@@ -309,12 +111,10 @@ margin-top: 315px;
 
     .footer__copy {
       @extend %footer-shared;
-
-
-
     }
 }
 
+//MEDIA QUERE
 @media (max-width: 1786px) {
   body::before {
     content: "";
@@ -347,23 +147,16 @@ margin-top: 315px;
   padding: 0px  20px;
   } 
   #myHeader {
-  height: 330px;
-  padding-top: 47px;
   flex-direction: column;
-    .title{
-      max-height: 92px;
-    }
     .nav {
     flex-direction: column;
-    padding-bottom: 41px;  
+    padding-bottom: 10px;  
     }
   }
   .main {
     flex-direction: column;
-    margin-top: 330px;
     .main__left {
       margin: 0;
-
       flex: 1 1 auto;
       .main__content{
         .main__item{
@@ -373,8 +166,11 @@ margin-top: 315px;
             padding: 0px;
             figure {
               width: 100%;
-              height: 100%;
+              height: 400px;
             }
+            img{
+              object-fit: cover;
+              }
           }
           .item__context{
             h2{
@@ -411,4 +207,53 @@ margin-top: 315px;
       }
     }
   }
+}
+@media (max-width: 750px) {
+  body::before {
+    content: "";
+  }
+  .main {
+    .main__left {
+      .main__content{
+        .main__item{
+          .item__header{
+            figure {
+              width: 100%;
+              height: 300px;
+                img{
+                object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 550px) {
+  body::before {
+    content: "";
+  }
+  #myHeader {
+    height: 265px;
+  .main {
+    margin-top: 315px;
+    .main__left {
+      .main__content{
+        .main__item{
+          .item__header{
+            figure {
+              width: 100%;
+              height: 100%;
+                img{
+                object-fit: cover;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 }

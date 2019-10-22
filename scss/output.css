@@ -1,80 +1,12 @@
-@charset "UTF-8";
 *, *:after, *:before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: .5s ease-in-out;
-  /* добавим плавность переходов для всех элементов страницы*/ }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 2086px;
-  opacity: 1;
-  margin-left: auto;
-  margin-right: auto; }
-
-.container::before {
-  content: ""; }
-
-#myHeader, .main, .footer {
-  display: flex;
-  width: 100%;
-  max-width: 2086px;
-  padding: 0 434px; }
-
-#myHeader {
-  flex-direction: row;
-  height: 265px;
-  background-color: #F8F8F8;
-  position: fixed;
-  transition: 0.2s; }
-  #myHeader .title {
-    display: flex;
-    flex: 3 3 auto;
-    flex-direction: column;
-    align-self: center; }
-    #myHeader .title .title__main {
-      font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      letter-spacing: 0;
-      font-size: 33px;
-      color: #143774;
-      opacity: 1;
-      margin: 0; }
-    #myHeader .title .title__content {
-      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      letter-spacing: 0;
-      font-size: 12px;
-      color: #1792D2;
-      opacity: 1;
-      letter-spacing: 2.4px;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin: 0; }
-  #myHeader .nav {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: row;
-    justify-content: space-between; }
-    #myHeader .nav .nav__link {
-      align-self: center;
-      color: #717171;
-      font-size: 16px;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 3.2px;
-      font-weight: bold;
-      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      padding-bottom: 4px; }
-      #myHeader .nav .nav__link:hover {
-        background: linear-gradient(to top, #717171 2px, transparent 0);
-        transition: 0.9s; }
+  transition: .5s ease-in-out; }
 
 .main {
   margin-bottom: 50px;
-  margin-top: 315px; }
+  margin-top: 240px; }
   .main .main__left {
     flex: 1 1 auto;
     margin-right: 50px; }
@@ -136,7 +68,9 @@
             align-self: center;
             width: 110%;
             height: 110%;
-            transition: 0.5s; }
+            transition: 0.5s;
+            margin-left: -5%;
+            margin-top: -2.5%; }
       .main .main__left .main__content .main__item .item__context h2 {
         margin: 0px; }
       .main .main__left .main__content .main__item .item__context p {
@@ -196,6 +130,72 @@
     .main .main__sidebar .sidebar__content :last-child {
       border: none; }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 2086px;
+  opacity: 1;
+  margin-left: auto;
+  margin-right: auto; }
+
+.container::before {
+  content: ""; }
+
+.main, #myHeader, .footer {
+  display: flex;
+  width: 100%;
+  max-width: 2086px;
+  padding: 0 434px; }
+
+#myHeader {
+  flex-direction: row;
+  height: 200px;
+  background-color: #F8F8F8;
+  position: fixed;
+  transition: 0.2s; }
+  #myHeader .title {
+    display: flex;
+    flex: 3 3 auto;
+    flex-direction: column;
+    align-self: center; }
+    #myHeader .title .title__main {
+      font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      letter-spacing: 0;
+      font-size: 33px;
+      color: #143774;
+      opacity: 1;
+      margin: 0; }
+    #myHeader .title .title__content {
+      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      letter-spacing: 0;
+      font-size: 12px;
+      color: #1792D2;
+      opacity: 1;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0; }
+  #myHeader .nav {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-between; }
+    #myHeader .nav .nav__link {
+      align-self: center;
+      color: #717171;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 3.2px;
+      font-weight: bold;
+      font-family: Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-bottom: 4px; }
+      #myHeader .nav .nav__link:hover {
+        background: linear-gradient(to top, #717171 2px, transparent 0);
+        transition: 0.9s; }
+
 .footer {
   height: 172px;
   background-color: #143774;
@@ -216,40 +216,35 @@
   body::before {
     content: ""; }
 
-  #myHeader, .main, .footer {
+  .main, #myHeader, .footer {
     padding: 0 334px; } }
 @media (max-width: 1486px) {
   body::before {
     content: ""; }
 
-  #myHeader, .main, .footer {
+  .main, #myHeader, .footer {
     padding: 0 200px; } }
 @media (max-width: 1186px) {
   body::before {
     content: ""; }
 
-  #myHeader, .main, .footer {
+  .main, #myHeader, .footer {
     padding: 0 80px; } }
 @media (max-width: 950px) {
   body::before {
     content: ""; }
 
-  #myHeader, .main, .footer {
+  .main, #myHeader, .footer {
     padding: 0px  20px; }
 
   #myHeader {
-    height: 330px;
-    padding-top: 47px;
     flex-direction: column; }
-    #myHeader .title {
-      max-height: 92px; }
     #myHeader .nav {
       flex-direction: column;
-      padding-bottom: 41px; }
+      padding-bottom: 10px; }
 
   .main {
-    flex-direction: column;
-    margin-top: 330px; }
+    flex-direction: column; }
     .main .main__left {
       margin: 0;
       flex: 1 1 auto; }
@@ -260,7 +255,9 @@
           padding: 0px; }
           .main .main__left .main__content .main__item .item__header figure {
             width: 100%;
-            height: 100%; }
+            height: 400px; }
+          .main .main__left .main__content .main__item .item__header img {
+            object-fit: cover; }
         .main .main__left .main__content .main__item .item__context h2 {
           margin-top: 20px; }
         .main .main__left .main__content .main__item .item__context p {
@@ -277,6 +274,28 @@
         width: 100%;
         height: 87px; }
         .main .main__sidebar .sidebar__content figure img {
+          object-fit: cover; } }
+@media (max-width: 750px) {
+  body::before {
+    content: ""; }
+
+  .main .main__left .main__content .main__item .item__header figure {
+    width: 100%;
+    height: 300px; }
+    .main .main__left .main__content .main__item .item__header figure img {
+      object-fit: cover; } }
+@media (max-width: 550px) {
+  body::before {
+    content: ""; }
+
+  #myHeader {
+    height: 265px; }
+    #myHeader .main {
+      margin-top: 315px; }
+      #myHeader .main .main__left .main__content .main__item .item__header figure {
+        width: 100%;
+        height: 100%; }
+        #myHeader .main .main__left .main__content .main__item .item__header figure img {
           object-fit: cover; } }
 
 /*# sourceMappingURL=output.css.map */
